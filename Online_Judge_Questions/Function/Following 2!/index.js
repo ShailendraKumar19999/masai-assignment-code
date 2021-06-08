@@ -34,3 +34,35 @@ Sample Output 1
 
 0
 */
+
+function find(arr, N){
+	for(var i=0; i<N;i++){
+      	if(i === N-1)
+        	return -1;
+    	if(arr[i] === 2){
+        	return arr[i+1];
+        }
+      
+    }
+}
+
+
+function runProgram(input){
+	 input = input.split("\n");
+  	var N = input[0];
+  	var arr = input[1].split(" ").map(Number);
+  	var result = find(arr, N);
+  console.log(result);
+  
+}
+process.stdin.resume();
+process.stdin.setEncoding("ascii");
+let read = "";
+process.stdin.on("data", function (input) {
+    read += input;
+});
+process.stdin.on("end", function () {
+	read = read.replace(/\n$/,"")
+   runProgram(read);
+});
+//Enter code here//Enter code here//Enter code here//Enter code here//Enter code here//Enter code here
